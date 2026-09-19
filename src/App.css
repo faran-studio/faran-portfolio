@@ -1,0 +1,344 @@
+
+
+.portfolio {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bfe7f5;
+  padding: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.portfolio-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+}
+
+/* =========================
+   MAIN FRAME
+   ========================= */
+
+.portfolio-frame {
+  width: 1200px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 365px 1fr;
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================
+   PROFILE / LEFT PANEL
+   ========================= */
+
+.profile-panel {
+  padding: 50px 30px 40px;
+  border-right: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 35px;
+  border: 2px solid #555;
+  box-sizing: border-box;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-panel h1 {
+  margin: 10px 0 18px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  transform: translateY(50px);
+}
+
+.profile-panel .profile-title {
+  margin: 0;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transform: translateY(50px);
+}
+
+/* =========================
+   SOCIAL LINKS
+   ========================= */
+
+.social-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+.social-links a {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  cursor: default;
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* =========================
+   DOWNLOAD CV
+   ========================= */
+
+.download-cv-button {
+  margin-top: 0;
+  width: 180px;
+  height: 52px;
+  border: none;
+  border-radius: 26px;
+  background: #444;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* =========================
+   CONTENT PANEL
+   ========================= */
+
+.content-panel {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.content-panel h2 {
+  margin: 0 0 20px;
+  font-size: 48px;
+}
+
+.content-panel p {
+  color: #bbb;
+  line-height: 1.8;
+}
+
+/* =========================
+   RIGHT NAVIGATION AREA
+   ========================= */
+
+.navigation-wrapper {
+  width: 76px;
+  height: 599px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* =========================
+   MAIN BLACK NAV RAIL
+   ========================= */
+
+.navigation {
+  width: 64px;
+  min-height: 360px;
+  transform: translateY(3px);
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #303030;
+  border: 1px solid #484848;
+  border-radius: 28px;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   NAVIGATION BUTTON
+   ========================= */
+
+.navigation button {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: #aaa;
+
+  cursor: pointer;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.navigation button:hover {
+  color: #fff;
+}
+
+/* =========================
+   NAVIGATION ICON
+   ========================= */
+
+.navigation-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.navigation-icon svg {
+  width: 23px;
+  height: 23px;
+
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.navigation button:hover .navigation-icon {
+  color: #fff;
+}
+
+/* =========================
+   SINGLE BLACK LABEL CAPSULE
+   ========================= */
+
+.navigation-label {
+  position: absolute;
+
+  right: calc(50% + 22px);
+  top: 50%;
+
+  transform: translate(24px, -50%);
+
+  opacity: 0;
+
+  width: max-content;
+  min-width: 82px;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(200, 169, 107, 0.35);
+  border-radius: 8px;
+
+  background: rgba(27, 27, 27, 0.96);
+  color: #ddd;
+
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.3s ease;
+
+  z-index: 10;
+}
+
+/* Open label */
+
+.navigation button:hover .navigation-label {
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+/* =========================
+   PREVIOUS / NEXT CONTROLS
+   ========================= */
+
+.navigation-controls {
+  width: 64px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  background: #303030;
+  border: 1px solid #484848;
+  border-radius: 28px;
+
+  box-sizing: border-box;
+}
+
+.navigation-controls button {
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+
+  background: transparent;
+  color: #aaa;
+
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navigation-controls button:hover {
+  background: #3d3d3d;
+  color: #fff;
+}
