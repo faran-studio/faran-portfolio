@@ -1,6 +1,7 @@
 
 import Navigation from '../components/navigation/Navigation'
 import Experiments from './Experiments'
+import faranProfile from "../assets/faran-profile(1).png";
 
 function Home() {
   return (
@@ -11,7 +12,9 @@ function Home() {
 
           <aside className="profile-panel">
 
-            <div className="profile-image"></div>
+            <div className="profile-image">
+              <img src={faranProfile} alt="Faran Profile" />
+            </div>
 
             <h1>Faran</h1>
 
