@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #bfe7f5;
+  background: #07110D;
   padding: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -27,8 +27,8 @@
   height: 600px;
   display: grid;
   grid-template-columns: 365px 1fr;
-  background: #252525;
-  border: 1px solid #444;
+  background: #0B1210;
+  border: 1px solid #2A3932;
   border-radius: 30px;
   overflow: hidden;
   box-sizing: border-box;
@@ -40,22 +40,75 @@
 
 .profile-panel {
   padding: 50px 30px 40px;
+  background: #18251F;
   border-right: 1px solid #444;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .profile-image {
+  position: relative;
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 35px;
-  border: 2px solid #555;
+  border: 2px solid #A8C66C;
   box-sizing: border-box;
+
+  box-shadow:
+    inset 0 0 28px rgba(168, 198, 108, 0.18),
+    0 0 18px rgba(168, 198, 108, 0.12);
+}
+
+.profile-leaf {
+  position: absolute;
+  width: 155px;
+  height: 116px;
+  left: -10px;
+  bottom: -4px;
+  z-index: 3;
+  overflow: visible;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+.olive-stem {
+  fill: none;
+  stroke: #8EAF55;
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.olive-leaf {
+  fill: url(#oliveLeafGradient);
+  opacity: 0.9;
+}
+
+.profile-quote {
+  position: absolute;
+  right: -55px;
+  top: 98px;
+  color: #B8D878;
+  font-size: 11px;
+  line-height: 1.45;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.82;
+  z-index: 4;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .profile-image img {
@@ -64,17 +117,30 @@
   object-fit: cover;
 }
 
+.profile-image {
+  position: relative;
+}
+
+.profile-image::after {
+  content: "🌿";
+  position: absolute;
+  right: -8px;
+  bottom: 4px;
+  font-size: 28px;
+  transform: rotate(-25deg);
+}
+
 .profile-panel h1 {
   margin: 10px 0 18px;
   font-size: 42px;
   font-weight: 700;
-  color: #fff;
+  color: #F3EBDD;
   transform: translateY(50px);
 }
 
 .profile-panel .profile-title {
   margin: 0;
-  color: #aaa;
+  color: #B8BD89;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -99,7 +165,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #aaa;
+  color: #B8BDB9;
   cursor: default;
 }
 
@@ -125,14 +191,23 @@
   margin-top: 0;
   width: 180px;
   height: 52px;
-  border: none;
+  border: 1px solid #A8C66C;
   border-radius: 26px;
-  background: #444;
-  color: #fff;
+  background: #080D0B;
+  color: #F3EBDD;
   font-size: 15px;
   cursor: pointer;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
+
+.download-cv-button:hover {
+  background: #101A15;
+  border-color: #B8D878;
+  color: #B8D878;
+}
+
+
 
 /* =========================
    CONTENT PANEL
@@ -140,6 +215,7 @@
 
 .content-panel {
   padding: 80px;
+  background: #080D0B;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,10 +226,11 @@
 .content-panel h2 {
   margin: 0 0 20px;
   font-size: 48px;
+  color: #F3EBDD;
 }
 
 .content-panel p {
-  color: #bbb;
+  color: #B8BDB9;
   line-height: 1.8;
 }
 
@@ -212,7 +289,7 @@
   justify-content: center;
 
   background: transparent;
-  color: #aaa;
+  color: #9FA8A3;
 
   cursor: pointer;
   overflow: visible;
@@ -220,7 +297,7 @@
 }
 
 .navigation button:hover {
-  color: #fff;
+  color: #A8C66C;
 }
 
 /* =========================
@@ -275,7 +352,7 @@
 
   padding: 9px 15px;
 
-  border: 1px solid rgba(200, 169, 107, 0.35);
+  border: 1px solid rgba(168, 198, 108  , 0.35);
   border-radius: 8px;
 
   background: rgba(27, 27, 27, 0.96);
@@ -332,7 +409,7 @@
   border-radius: 12px;
 
   background: transparent;
-  color: #aaa;
+  color: #A8C66C;
 
   font-size: 30px;
   cursor: pointer;
