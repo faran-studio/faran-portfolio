@@ -247,7 +247,7 @@
    ========================= */
 
 .content-panel {
-  padding: 80px;
+  padding: 0;
   background: #080D0B;
   background-image:
     radial-gradient(
@@ -265,6 +265,18 @@
   justify-content: center;
   box-sizing: border-box;
   min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.content-panel > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .content-panel h2 {
@@ -528,9 +540,11 @@
 
 .about-page {
   width: 100%;
-  min-height: 100%;
-  padding: 70px 80px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
+  padding: 70px 80px;
   color: #F3EBDD;
 }
 
@@ -684,3 +698,4 @@
 }
 
 
+ 
