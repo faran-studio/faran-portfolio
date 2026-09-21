@@ -1,14 +1,11 @@
-import Navigation from '../components/navigation/Navigation'
 
-function About({ onNavigate }: { onNavigate: (page: string) => void }) {
+function About() {
   return (
     <main className="about-page">
       <section className="about-section about-intro">
         <p className="about-kicker">About Me</p>
 
-        <h1>
-          I’m Faran.
-        </h1>
+        <h1>I’m Faran.</h1>
 
         <p className="about-text">
           I’m a web designer and developer who enjoys turning ideas into
@@ -36,33 +33,25 @@ function About({ onNavigate }: { onNavigate: (page: string) => void }) {
           <article className="about-service-card">
             <span>01</span>
             <h2>Web Design</h2>
-            <p>
-              Clean, thoughtful and visually balanced websites.
-            </p>
+            <p>Clean, thoughtful and visually balanced websites.</p>
           </article>
 
           <article className="about-service-card">
             <span>02</span>
             <h2>Web Development</h2>
-            <p>
-              Building responsive and functional digital experiences.
-            </p>
+            <p>Building responsive and functional digital experiences.</p>
           </article>
 
           <article className="about-service-card">
             <span>03</span>
             <h2>WordPress</h2>
-            <p>
-              Flexible websites with simple content management.
-            </p>
+            <p>Flexible websites with simple content management.</p>
           </article>
 
           <article className="about-service-card">
             <span>04</span>
             <h2>Creative Lab</h2>
-            <p>
-              Experiments, ideas and creative digital projects.
-            </p>
+            <p>Experiments, ideas and creative digital projects.</p>
           </article>
         </div>
       </section>
@@ -76,9 +65,7 @@ function About({ onNavigate }: { onNavigate: (page: string) => void }) {
       <section className="about-section about-journey">
         <p className="about-kicker">My Journey</p>
 
-        <h2>
-          I started from the deep end.
-        </h2>
+        <h2>I started from the deep end.</h2>
 
         <p className="about-text">
           Now I know how to build from both sides.
@@ -109,9 +96,9 @@ function About({ onNavigate }: { onNavigate: (page: string) => void }) {
           <span>GitHub</span>
         </div>
       </section>
-     <Navigation onNavigate={onNavigate} /> 
     </main>
   )
 }
 
 export default About
+

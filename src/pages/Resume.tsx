@@ -1,7 +1,6 @@
 
-import Navigation from '../components/navigation/Navigation'
 
-function Resume({ onNavigate }: { onNavigate: (page: string) => void }) {
+function Resume() {
   return (
     <main className="resume-page">
       <section className="resume-section">
@@ -13,11 +12,10 @@ function Resume({ onNavigate }: { onNavigate: (page: string) => void }) {
           A brief overview of my experience, skills and professional journey.
         </p>
       </section>
-
-      <Navigation onNavigate={onNavigate} />
     </main>
   )
 }
 
 export default Resume
+
 

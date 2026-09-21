@@ -1,7 +1,6 @@
 
-import Navigation from '../components/navigation/Navigation'
 
-function Portfolio({ onNavigate }: { onNavigate: (page: string) => void }) {
+function Portfolio() {
   return (
     <main className="portfolio-page">
       <section className="portfolio-section">
@@ -13,11 +12,10 @@ function Portfolio({ onNavigate }: { onNavigate: (page: string) => void }) {
           A collection of my web design and development projects.
         </p>
       </section>
-
-      <Navigation onNavigate={onNavigate} />
     </main>
   )
 }
 
 export default Portfolio
+
 

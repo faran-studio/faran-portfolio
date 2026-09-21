@@ -1,20 +1,44 @@
 
-import Navigation from '../components/navigation/Navigation'
-
-function Contact({ onNavigate }: { onNavigate: (page: string) => void }) {
+function Contact() {
   return (
     <main className="contact-page">
-      <section className="contact-section">
+
+      <section className="contact-hero">
         <p className="page-kicker">Contact</p>
 
-        <h1>Get In Touch</h1>
+        <h1>Let’s Talk.</h1>
 
-        <p className="page-intro">
-          Let’s talk about a project, an idea or a creative collaboration.
+        <p className="contact-intro">
+          Have a project in mind, an idea to explore,
+          or simply want to say hello?
         </p>
       </section>
 
-      <Navigation onNavigate={onNavigate} />
+      <div className="contact-divider">
+        <span></span>
+        <span>❧</span>
+        <span></span>
+      </div>
+
+      <section className="contact-details">
+
+        <article className="contact-item">
+          <span className="contact-label">Email</span>
+          <p>hello@faran.studio</p>
+        </article>
+
+        <article className="contact-item">
+          <span className="contact-label">Location</span>
+          <p>Tehran, Iran</p>
+        </article>
+
+        <article className="contact-item">
+          <span className="contact-label">Available for</span>
+          <p>Web Design &amp; Development</p>
+        </article>
+
+      </section>
+
     </main>
   )
 }

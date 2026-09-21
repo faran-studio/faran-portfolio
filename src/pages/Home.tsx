@@ -1,5 +1,5 @@
 
-function Home({ onNavigate }: { onNavigate: (page: string) => void }) {
+function Home() {
   return (
     <div className="home-hero">
       <h2>Faran</h2>

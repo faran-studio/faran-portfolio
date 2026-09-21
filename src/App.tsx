@@ -15,29 +15,17 @@ function App() {
 
   return (
     <PortfolioShell onNavigate={setActivePage}>
-      {activePage === 'home' && (
-        <Home onNavigate={setActivePage} />
-      )}
+      {activePage === 'home' && <Home />}
 
-      {activePage === 'about' && (
-        <About onNavigate={setActivePage} />
-      )}
+      {activePage === 'about' && <About />}
 
-      {activePage === 'resume' && (
-        <Resume onNavigate={setActivePage} />
-      )}
+      {activePage === 'resume' && <Resume />}
 
-      {activePage === 'portfolio' && (
-        <Portfolio onNavigate={setActivePage} />
-      )}
+      {activePage === 'portfolio' && <Portfolio />}
 
-      {activePage === 'experiments' && (
-        <Experiments onNavigate={setActivePage} />
-      )}
+      {activePage === 'experiments' && <Experiments />}
 
-      {activePage === 'contact' && (
-        <Contact onNavigate={setActivePage} />
-      )}
+      {activePage === 'contact' && <Contact />}
     </PortfolioShell>
   )
 }
