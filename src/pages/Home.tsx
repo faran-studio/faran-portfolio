@@ -1,9 +1,8 @@
 
 import Navigation from '../components/navigation/Navigation'
-import Experiments from './Experiments'
 import faranProfile from "../assets/faran-profile(1).png";
 
-function Home() {
+function Home({ onNavigate }: { onNavigate: (page: string) => void }) {
   return (
     <main className="portfolio">
       <div className="portfolio-layout">
@@ -55,16 +54,35 @@ function Home() {
           </aside>
 
           <section className="content-panel">
-            <Experiments />
-          </section>
+  <div className="home-hero">
+  <h2>Faran</h2>
+
+  <div className="hero-divider">
+  <span className="hero-line"></span>
+
+  <span className="hero-olive" aria-hidden="true">
+    ❧
+  </span>
+
+  <span className="hero-line"></span>
+</div>
+
+<div className="hero-role">
+  <span>Web Designer</span>
+  <span className="hero-amp">&amp;</span>
+  <span>Developer</span>
+</div>
+</div>
+</section>
 
         </div>
 
-        <Navigation />
-
+        <Navigation onNavigate={onNavigate} />
+    
       </div>
     </main>
   )
 }
 
 export default Home
+

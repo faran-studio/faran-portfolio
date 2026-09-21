@@ -65,12 +65,14 @@ const navigationItems = [
   },
 ]
 
-function Navigation() {
+function Navigation({ onNavigate }: { onNavigate: (page: string) => void }) {
   return (
     <div className="navigation-wrapper">
       <nav className="navigation">
         {navigationItems.map((item) => (
-          <button key={item.id} type="button">
+          <button
+           key={item.id} 
+          type="button" onClick={() =>  onNavigate(item.id)}>
             <span className="navigation-label">
               {item.label}
             </span>

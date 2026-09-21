@@ -1,5 +1,5 @@
-
-function Experiments() {
+import Navigation from '../components/navigation/Navigation'
+function Experiments({ onNavigate }: { onNavigate: (page: string) => void }) {
   const experiments = [
     {
       number: '01',
@@ -71,6 +71,7 @@ function Experiments() {
           </article>
         ))}
       </div>
+     <Navigation onNavigate={onNavigate} /> 
     </section>
   )
 }
