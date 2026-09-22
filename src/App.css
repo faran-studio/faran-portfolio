@@ -2260,7 +2260,6 @@
   font-size: 22px;
 }
 
-
 /* ---------- SCROLLBAR ---------- */
 
 .portfolio-page::-webkit-scrollbar {
@@ -2277,8 +2276,110 @@
 }
 
 
+/* =========================================
+   MOTION 1 — SOFT RIGHT ENTRY
+   ========================================= */
+
+.content-panel {
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.page-stage {
+  width: 100%;
+  height: 100%;
+
+  animation:
+    page-enter-right
+    0.7s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+@keyframes page-enter-right {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(70px)
+      translateZ(-80px)
+      rotateY(-7deg)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      translateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 2 — TOP DOWN LANDING
+   ABOUT PAGE ONLY
+   ========================================= */
+
+.page-motion-about {
+  animation:
+    page-enter-top
+    0.75s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-enter-top {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-90px)
+      translateZ(-100px)
+      rotateX(8deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(8px)
+      translateZ(0)
+      rotateX(-1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      translateZ(0)
+      rotateX(0)
+      scale(1);
+  }
+}
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

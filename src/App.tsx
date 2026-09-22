@@ -13,19 +13,31 @@ import Contact from './pages/Contact'
 function App() {
   const [activePage, setActivePage] = useState('home')
 
+  const handleNavigate = (page: string) => {
+    if (page === activePage) return
+
+    setActivePage(page)
+  }
+
+  const renderPage = () => {
+    if (activePage === 'home') return <Home />
+    if (activePage === 'about') return <About />
+    if (activePage === 'resume') return <Resume />
+    if (activePage === 'portfolio') return <Portfolio />
+    if (activePage === 'experiments') return <Experiments />
+    if (activePage === 'contact') return <Contact />
+
+    return <Home />
+  }
+
   return (
-    <PortfolioShell onNavigate={setActivePage}>
-      {activePage === 'home' && <Home />}
-
-      {activePage === 'about' && <About />}
-
-      {activePage === 'resume' && <Resume />}
-
-      {activePage === 'portfolio' && <Portfolio />}
-
-      {activePage === 'experiments' && <Experiments />}
-
-      {activePage === 'contact' && <Contact />}
+    <PortfolioShell onNavigate={handleNavigate}>
+      <div
+        key={activePage}
+        className={`page-stage page-motion-${activePage}`}
+      >
+        {renderPage()}
+      </div>
     </PortfolioShell>
   )
 }
