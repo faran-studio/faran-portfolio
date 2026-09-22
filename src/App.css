@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 365px 1fr;
   background: #0B1210;
-  border: 1px solid #2A3932;
+  border: 1px solid #3A4941;
   border-radius: 30px;
   overflow: hidden;
   box-sizing: border-box;
@@ -45,7 +45,7 @@
     radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.035), transparent 30%),
     radial-gradient(circle at 80% 65%, rgba(0, 0, 0, 0.12), transparent 35%),
     radial-gradient(circle at 35% 90%, rgba(255, 255, 255, 0.02), transparent 25%);
-  border-right: 1px solid #444;
+  border-right: 1px solid #555B56;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,7 +320,7 @@
   gap: 8px;
 
   background: #303030;
-  border: 1px solid #484848;
+  border: 1px solid #59665F;
   border-radius: 28px;
 
   box-sizing: border-box;
@@ -651,7 +651,7 @@
 .about-service-card {
   padding: 28px;
   background: rgba(243, 235, 221, 0.035);
-  border: 1px solid rgba(184, 201, 138, 0.12);
+  border: 1px solid rgba(184, 201, 138, 0.55);
   border-radius: 10px;
 }
 
@@ -711,8 +711,8 @@
 .about-skills-list span {
   padding: 10px 17px;
   color: #F3EBDD;
-  background: rgba(243, 235, 221, 0.035);
-  border: 1px solid rgba(184, 201, 138, 0.12);
+  background: rgba(243, 235, 221, 0.075);
+  border: 1px solid rgba(184, 201, 138, 0.45);
   border-radius: 30px;
   font-size: 14px;
   font-weight: 300;
@@ -857,7 +857,7 @@
   box-sizing: border-box;
 
   background: rgba(243, 235, 221, 0.035);
-  border: 1px solid rgba(184, 201, 138, 0.12);
+  border: 1px solid rgba(184, 201, 138, 0.45);
   border-radius: 12px;
 }
 
@@ -890,97 +890,749 @@
   font-size: 18px;
 }
 
-/* =========================================
-   CONTACT
-========================================= */
+ /* =========================
+   CONTACT PAGE
+========================= */
 
 .contact-page {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 70px 80px;
+
+  padding: 58px 70px 80px;
+
   color: #F3EBDD;
+
+  background:
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(168, 182, 112, 0.07),
+      transparent 35%
+    ),
+    #080D0B;
 }
 
+
+/* =========================
+   HERO
+========================= */
+
 .contact-hero {
+  position: relative;
+  z-index: 2;
+
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 38px;
+  padding-top: 25px;
+
   text-align: center;
 }
 
 .contact-hero h1 {
   margin: 0;
+
   color: #F3EBDD;
-  font-size: 58px;
+
+  font-size: 56px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+}
+
+.contact-hero h1 span {
+  color: #B8C98A;
 }
 
 .contact-intro {
   max-width: 620px;
-  margin: 28px auto 0;
+
+  margin: 22px auto 0;
+
   color: #F3EBDD;
-  opacity: 0.78;
-  font-size: 18px;
+  opacity: 0.72;
+
+  font-size: 17px;
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.8;
 }
 
+
+/* =========================
+   DIVIDER
+========================= */
+
 .contact-divider {
-  max-width: 850px;
-  margin: 85px auto 70px;
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 58px auto 38px;
+
   display: flex;
   align-items: center;
+
   gap: 14px;
 }
 
 .contact-divider span:first-child,
 .contact-divider span:last-child {
   flex: 1;
+
   height: 1px;
+
   background: #B8C98A;
-  opacity: 0.35;
+  opacity: 0.30;
 }
 
 .contact-divider span:nth-child(2) {
   color: #B8C98A;
-  font-size: 22px;
+
+  font-size: 23px;
+
   transform: rotate(-15deg);
+
+  text-shadow:
+    0 0 12px rgba(184, 201, 138, 0.25);
 }
 
-.contact-details {
-  max-width: 850px;
+
+/* =========================
+   MAIN CONTACT CONTENT
+========================= */
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
   margin: 0 auto 80px;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+
+  grid-template-columns: 0.88fr 1.25fr;
+
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
 }
 
 .contact-item {
-  padding: 28px 24px;
+  position: relative;
+
+  min-height: 130px;
+
+  padding: 22px 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
-  background: rgba(243, 235, 221, 0.035);
-  border: 1px solid rgba(184, 201, 138, 0.12);
-  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(184, 201, 138, 0.085),
+      rgba(243, 235, 221, 0.035)
+    );
+
+  border: 1px solid rgba(184, 201, 138, 0.72);
+
+  border-radius: 13px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(243, 235, 221, 0.045),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3sease;
+    
 }
 
-.contact-label {
+.contact-item:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(184, 201, 138, 0.75);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(184, 201, 138, 0.12),
+      rgba(243, 235, 221, 0.045)
+    ); 
+
+    box-shadow:0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Icons */
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #B8C98A;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+
+  border: 1px solid rgba(184, 201, 138, 0.72);
+
+  border-radius: 50%;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 0 15px rgba(184, 201, 138, 0.07);
+}
+.phone-icon svg {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-35deg);
+}
+.phone-icon svg {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-100deg);
+}
+
+
+/* Labels */
+
+.contact-label {
+  margin-bottom: 8px;
+
+  color: #B8C98A;
+
+  font-size: 10px;
+  letter-spacing: 1.7px;
+
   text-transform: uppercase;
 }
 
-.contact-item p {
-  margin: 14px 0 0;
+
+/* Links */
+
+.contact-item a {
   color: #F3EBDD;
-  font-size: 15px;
+
+  font-size: 13px;
   font-weight: 300;
-  line-height: 1.6;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease;
 }
+
+.contact-item a:hover {
+  color: #C8D59B;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.contact-location {
+  position: relative;
+
+  grid-column: 1 / -1;
+
+  min-height: 82px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(184, 201, 138, 0.095),
+      rgba(243, 235, 221, 0.025)
+    );
+
+  border: 1px solid rgba(184, 201, 138, 0.72);
+
+  border-radius: 13px;
+}
+
+.contact-location > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-location .contact-label {
+  margin-bottom: 7px;
+}
+ .contact-location strong {
+  color: #F3EBDD;
+
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/* Small botanical decoration */
+
+.location-leaf {
+  position: relative;
+
+  width: 70px;
+  height: 60px;
+
+  opacity: 0.48;
+}
+
+.location-leaf span {
+  position: absolute;
+
+  width: 19px;
+  height: 9px;
+
+  background: #AFC07A;
+
+  border-radius: 100% 0 100% 0;
+
+  transform-origin: left center;
+}
+
+.location-leaf::before {
+  content: "";
+
+  position: absolute;
+
+  width: 48px;
+  height: 1px;
+
+  right: 4px;
+  bottom: 16px;
+
+  background: #AFC07A;
+
+  transform: rotate(-45deg);
+}
+
+.location-leaf span:nth-child(1) {
+  right: 22px;
+  bottom: 29px;
+
+  transform: rotate(-18deg);
+}
+
+.location-leaf span:nth-child(2) {
+  right: 9px;
+  bottom: 18px;
+
+  transform: rotate(25deg);
+}
+
+.location-leaf span:nth-child(3) {
+  right: 30px;
+  bottom: 11px;
+
+  transform: rotate(-55deg);
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.contact-form-card {
+  position: relative;
+
+  padding: 30px 31px 32px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(184, 201, 138, 0.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(184, 201, 138, 0.075),
+      rgba(243, 235, 221, 0.035)
+    );
+
+  border: 1px solid rgba(184, 201, 138, 0.72);
+
+  border-radius: 14px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(243, 235, 221, 0.045),
+    0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Form decorative olive branch */
+
+.form-botanical {
+  position: absolute;
+
+  top: 5px;
+  right: 3px;
+
+  width: 110px;
+  height: 100px;
+
+  opacity: 0.35;
+
+  pointer-events: none;
+}
+
+.form-botanical .stem {
+  position: absolute;
+
+  right: 18px;
+  top: 12px;
+
+  width: 85px;
+  height: 1px;
+
+  background: #AFC07A;
+
+  transform: rotate(135deg);
+}
+
+.form-botanical .leaf {
+  position: absolute;
+
+  width: 27px;
+  height: 12px;
+
+  background: #AFC07A;
+
+  border-radius: 100% 0 100% 0;
+}
+
+
+/* Leaf positions */
+
+.form-botanical .leaf-1 {
+  right: 58px;
+  top: 18px;
+
+  transform: rotate(15deg);
+}
+
+.form-botanical .leaf-2 {
+  right: 39px;
+  top: 29px;
+
+  transform: rotate(150deg);
+}
+
+.form-botanical .leaf-3 {
+  right: 28px;
+  top: 45px;
+
+  transform: rotate(25deg);
+}
+
+.form-botanical .leaf-4 {
+  right: 9px;
+  top: 55px;
+
+  transform: rotate(160deg);
+}
+
+
+/* =========================
+   FORM TITLE
+========================= */
+
+.contact-form-kicker {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 11px;
+
+  color: #B8C98A;
+
+  font-size: 10px;
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+.contact-form-card h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 25px;
+
+  color: #F3EBDD;
+
+  font-size: 29px;
+  font-weight: 400;
+
+  letter-spacing: 0.2px;
+}
+
+.contact-form-card h2 span {
+  color: #B8C98A;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.contact-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  color: #B8C98A;
+
+  font-size: 10px;
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  box-sizing: border-box;
+
+  color: #F3EBDD;
+
+  background:
+    rgba(5, 10, 8, 0.52);
+
+  border: 1px solid rgba(243, 235, 221, 0.16);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 300;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-form input {
+  height: 43px;
+}
+
+.contact-form textarea {
+  min-height: 125px;
+
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(5, 10, 8, 0.70);
+
+  border-color: rgba(184, 201, 138, 0.58);
+
+  box-shadow:
+    0 0 0 2px rgba(184, 201, 138, 0.05);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(243, 235, 221, 0.38);
+}
+ /* =========================
+   SEND BUTTON
+========================= */
+
+.contact-submit {
+  align-self: flex-start;
+
+  margin-top: 3px;
+
+  padding: 11px 24px;
+
+  color: #10150F;
+
+  background: #B8C98A;
+
+  border: 1px solid #C7D59A;
+
+  border-radius: 30px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 20px rgba(184, 201, 138, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+
+  background: #C8D59B;
+
+  box-shadow:
+    0 10px 25px rgba(184, 201, 138, 0.18);
+}
+
+
+/* =========================
+   BOTANICAL BRANCH
+========================= */
+
+.contact-botanical {
+  position: absolute;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+}
+
+.contact-botanical-top {
+  top: 10px;
+  left: 8px;
+
+  width: 145px;
+  height: 135px;
+
+  transform: rotate(-18deg);
+}
+
+.contact-botanical .stem {
+  position: absolute;
+
+  left: 25px;
+  top: 20px;
+
+  width: 120px;
+  height: 1px;
+
+  background: #AFC07A;
+
+  transform: rotate(40deg);
+}
+
+.contact-botanical .leaf {
+  position: absolute;
+
+  width: 31px;
+  height: 13px;
+
+  background: #AFC07A;
+
+  border-radius: 100% 0 100% 0;
+}
+
+
+/* Botanical leaves */
+
+.contact-botanical .leaf-1 {
+  left: 30px;
+  top: 20px;
+
+  transform: rotate(-5deg);
+}
+
+.contact-botanical .leaf-2 {
+  left: 52px;
+  top: 34px;
+
+  transform: rotate(145deg);
+}
+
+.contact-botanical .leaf-3 {
+  left: 76px;
+  top: 45px;
+
+  transform: rotate(5deg);
+}
+
+.contact-botanical .leaf-4 {
+  left: 96px;
+  top: 60px;
+
+  transform: rotate(150deg);
+}
+
+.contact-botanical .leaf-5 {
+  left: 115px;
+  top: 73px;
+
+  transform: rotate(12deg);
+}
+
 /* =========================================
    PORTFOLIO
 ========================================= */
@@ -1053,9 +1705,9 @@
 }
 
 .portfolio-filters button.active {
-  background: rgba(184, 201, 138, 0.12);
+  background: rgba(184, 201, 138, 0.06);
   border-color: rgba(184, 201, 138, 0.45);
-  color: #B8C98A;
+  color: rgba(184, 201, 138, 0.55);
 }
 
 .portfolio-grid {
@@ -1120,6 +1772,512 @@
   font-size: 13px;
   font-weight: 300;
 }
+
+/* Contact form fields */
+
+.contact-form-card input,
+.contact-form-card textarea {
+  background: rgba(184, 201, 138, 0.06);
+
+  border: 1px solid rgba(184, 201, 138, 0.72);
+
+  color: #F3EBDD;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  outline: none;
+
+  border-color: rgba(184, 201, 138, 0.72);
+
+  background: rgba(184, 201, 138, 0.09);
+
+  box-shadow:
+    0 0 12px rgba(184, 201, 138, 0.08);
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+  color: rgba(243, 235, 221, 0.45);
+}
+/* Align Phone icon with Email icon */
+
+.contact-info .contact-item:nth-child(3) .contact-icon {
+  transform: translateY(13px);
+}
+
+ /* =========================================
+   RESUME
+========================================= */
+
+.resume-page {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 58px 70px 80px;
+  color: #F3EBDD;
+}
+
+.resume-header {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resume-kicker {
+  margin: 0 0 12px;
+  color: #B8C98A;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.resume-header h1 {
+  margin: 0;
+  color: #F3EBDD;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.resume-header h1 span {
+  color: #B8C98A;
+}
+
+.resume-intro {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #F3EBDD;
+  opacity: 0.72;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.resume-divider {
+  max-width: 920px;
+  margin: 48px auto 55px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.resume-divider span {
+  flex: 1;
+  height: 1px;
+  background: #B8C98A;
+  opacity: 0.3;
+}
+
+.resume-divider b {
+  color: #B8C98A;
+  font-size: 21px;
+  font-weight: 400;
+  transform: rotate(-15deg);
+}
+
+.resume-grid {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 55px;
+}
+
+.resume-section {
+  margin-bottom: 55px;
+}
+
+.resume-section h2 {
+  margin: 0 0 28px;
+  color: #F3EBDD;
+  font-size: 27px;
+  font-weight: 450;
+}
+
+.resume-section h2 span {
+  color: #B8C98A;
+}
+
+.resume-timeline {
+  position: relative;
+}
+
+.resume-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: rgba(184, 201, 138, 0.3);
+}
+
+.resume-timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 28px;
+  padding-bottom: 35px;
+}
+
+.resume-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #B8C98A;
+  border-radius: 50%;
+  background: #080D0B;
+  box-sizing: border-box;
+}
+
+.resume-timeline-date {
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.resume-timeline-date strong {
+  color: #B8C98A;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.resume-timeline-date span {
+  color: #F3EBDD;
+  opacity: 0.5;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.resume-timeline-content h3 {
+  margin: 0 0 9px;
+  color: #F3EBDD;
+  font-size: 19px;
+  font-weight: 450;
+}
+
+.resume-timeline-content p {
+  margin: 0;
+  color: #F3EBDD;
+  opacity: 0.68;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.resume-experience {
+  margin-top: 5px;
+}
+
+.resume-experience-card {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding: 21px 22px;
+  margin-bottom: 14px;
+  background: rgba(243, 235, 221, 0.035);
+  border: 1px solid rgba(184, 201, 138, 0.25);
+  border-radius: 10px;
+}
+
+.resume-card-number {
+  color: #B8C98A;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+.resume-experience-card h3 {
+  margin: 0 0 7px;
+  color: #F3EBDD;
+  font-size: 17px;
+  font-weight: 450;
+}
+
+.resume-experience-card p {
+  margin: 0;
+  color: #F3EBDD;
+  opacity: 0.65;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.resume-right .resume-section {
+  margin-bottom: 48px;
+}
+
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resume-skill > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.resume-skill > div:first-child span {
+  color: #F3EBDD;
+  font-size: 14px;
+  font-weight: 350;
+}
+
+.resume-skill > div:first-child small {
+  color: #B8C98A;
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.resume-skill-track {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  background: rgba(243, 235, 221, 0.08);
+  border-radius: 10px;
+}
+
+.resume-skill-track span {
+  display: block;
+  height: 100%;
+  background: #B8C98A;
+  border-radius: 10px;
+}
+
+.resume-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+ .resume-tags span {
+  padding: 9px 13px;
+  color: #F3EBDD;
+  background: rgba(243, 235, 221, 0.035);
+  border: 1px solid rgba(184, 201, 138, 0.32);
+  border-radius: 22px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* Resume scrollbar */
+
+.resume-page::-webkit-scrollbar {
+  width: 5px;
+}
+
+.resume-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.resume-page::-webkit-scrollbar-thumb {
+  background: rgba(184, 201, 138, 0.35);
+  border-radius: 10px;
+}
+
+/* =================================
+   PORTFOLIO PAGE
+================================= */
+
+.portfolio-page {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 55px 65px 70px;
+  color: #F3EBDD;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.portfolio-header {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-kicker {
+  margin: 0 0 10px;
+  color: #B8C98A;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.portfolio-header h1 {
+  margin: 0;
+  color: #F3EBDD;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-intro {
+  max-width: 680px;
+  margin: 18px auto 0;
+  color: #F3EBDD;
+  opacity: 0.72;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* ---------- FILTERS ---------- */
+
+.portfolio-filters {
+  max-width: 900px;
+  margin: 38px auto 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-filters button {
+  border: 1px solid rgba(184, 201, 138, 0.28);
+  background: rgba(243, 235, 221, 0.025);
+  color: rgba(243, 235, 221, 0.62);
+  padding: 9px 17px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.portfolio-filters button.active {
+  color: #18251F;
+  background: #B8C98A;
+  border-color: #B8C98A;
+}
+
+
+/* ---------- PROJECT GRID ---------- */
+
+.portfolio-grid {
+  max-width: 900px;
+  margin: 0 auto 60px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+
+/* ---------- PROJECT CARD ---------- */
+
+.portfolio-card {
+  overflow: hidden;
+  border: 1px solid rgba(184, 201, 138, 0.55);
+  border-radius: 14px;
+  background: rgba(243, 235, 221, 0.025);
+  box-sizing: border-box;
+}
+
+
+/* ---------- IMAGE AREA ---------- */
+
+.portfolio-card-image {
+  height: 185px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(184, 201, 138, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(243, 235, 221, 0.07),
+      transparent 35%
+    ),
+    #101714;
+
+  border-bottom: 1px solid rgba(184, 201, 138, 0.18);
+}
+
+.portfolio-card-image span {
+  color: rgba(184, 201, 138, 0.35);
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+/* ---------- CARD INFO ---------- */
+
+.portfolio-card-info {
+  min-height: 82px;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.portfolio-card-info p {
+  margin: 0 0 6px;
+  color: #B8C98A;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.portfolio-card-info h2 {
+  margin: 0;
+  color: #F3EBDD;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.portfolio-card-arrow {
+  color: #B8C98A;
+  font-size: 22px;
+}
+
+
+/* ---------- SCROLLBAR ---------- */
+
+.portfolio-page::-webkit-scrollbar {
+  width: 5px;
+}
+
+.portfolio-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.portfolio-page::-webkit-scrollbar-thumb {
+  background: rgba(184, 201, 138, 0.35);
+  border-radius: 10px;
+}
+
+
+
 
 
 

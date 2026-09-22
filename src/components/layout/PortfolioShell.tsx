@@ -1,95 +1,59 @@
 
-function Portfolio() {
-  const filters = ['All', 'Web Design', 'Development', 'WordPress']
+import Navigation from '../navigation/Navigation'
+import faranProfile from '../../assets/faran-profile(1).png'
 
+function PortfolioShell({
+  children,
+  onNavigate,
+}: {
+  children: React.ReactNode
+  onNavigate: (page: string) => void
+}) {
   return (
-    <main className="portfolio-page">
+    <main className="portfolio">
+      <div className="portfolio-layout">
 
-      <section className="portfolio-hero">
-        <p className="page-kicker">Portfolio</p>
+        <div className="portfolio-frame">
 
-        <h1>Selected Work</h1>
+          <aside className="profile-panel">
 
-        <p className="page-intro">
-          A collection of websites, experiments and digital experiences
-          built with care and purpose.
-        </p>
-      </section>
+            <div className="profile-image">
+              <img
+                src={faranProfile}
+                alt="Faran Profile"
+              />
+            </div>
 
-      <div className="portfolio-filters">
-        {filters.map((filter, index) => (
-          <button
-            key={filter}
-            className={index === 0 ? 'active' : ''}
-            type="button"
-          >
-            {filter}
-          </button>
-        ))}
+            <h1>Faran</h1>
+
+            <p className="profile-title">
+              Web Designer &amp; Developer
+            </p>
+
+            <div className="social-links">
+              {/* Social links stay here */}
+            </div>
+
+            <button
+              className="download-cv-button"
+              type="button"
+            >
+              Download CV
+            </button>
+
+          </aside>
+
+          <section className="content-panel">
+            {children}
+          </section>
+
+        </div>
+
+        <Navigation onNavigate={onNavigate} />
+
       </div>
-
-      <section className="portfolio-grid">
-
-        <article className="portfolio-card">
-          <div className="portfolio-image">
-            <span>Project Image</span>
-          </div>
-
-          <div className="portfolio-card-info">
-            <span className="portfolio-number">01</span>
-            <div>
-              <h2>Project One</h2>
-              <p>Web Design</p>
-            </div>
-          </div>
-        </article>
-
-        <article className="portfolio-card">
-          <div className="portfolio-image">
-            <span>Project Image</span>
-          </div>
-
-          <div className="portfolio-card-info">
-            <span className="portfolio-number">02</span>
-            <div>
-              <h2>Project Two</h2>
-              <p>Development</p>
-            </div>
-          </div>
-        </article>
-
-        <article className="portfolio-card">
-          <div className="portfolio-image">
-            <span>Project Image</span>
-          </div>
-
-          <div className="portfolio-card-info">
-            <span className="portfolio-number">03</span>
-            <div>
-              <h2>Project Three</h2>
-              <p>WordPress</p>
-            </div>
-          </div>
-        </article>
-
-        <article className="portfolio-card">
-          <div className="portfolio-image">
-            <span>Project Image</span>
-          </div>
-
-          <div className="portfolio-card-info">
-            <span className="portfolio-number">04</span>
-            <div>
-              <h2>Project Four</h2>
-              <p>Creative Lab</p>
-            </div>
-          </div>
-        </article>
-
-      </section>
-
     </main>
   )
 }
 
-export default Portfolio
+export default PortfolioShell
