@@ -753,7 +753,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 70px 80px;
+  padding: 58px 80px;
   color: #F3EBDD;
 }
 
@@ -805,7 +805,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 70px 80px;
+  padding: 86px 80px;
   color: #F3EBDD;
 }
 
@@ -902,7 +902,7 @@
   overflow-x: hidden;
   box-sizing: border-box;
 
-  padding: 58px 70px 80px;
+  padding: 145px 70px 80px;
 
   color: #F3EBDD;
 
@@ -1821,7 +1821,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 58px 70px 80px;
+  padding: 78px 70px 80px;
   color: #F3EBDD;
 }
 
@@ -2099,7 +2099,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 55px 65px 70px;
+  padding: 59px 65px 70px;
   color: #F3EBDD;
 }
 
@@ -2291,7 +2291,7 @@
 
   animation:
     page-enter-right
-    0.7s
+    2s
     cubic-bezier(0.22, 1, 0.36, 1)
     both;
 
@@ -2328,7 +2328,7 @@
 .page-motion-about {
   animation:
     page-enter-top
-    0.75s
+    2s
     cubic-bezier(0.22, 1, 0.36, 1)
     both;
 }
@@ -2365,9 +2365,923 @@
   }
 }
 
+/* =========================================
+   MOTION 3 — BOTTOM RISE
+   RESUME PAGE ONLY
+   ========================================= */
+
+.page-motion-resume {
+  animation:
+    page-enter-bottom
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-enter-bottom {
+  from {
+    opacity: 0;
+    transform:
+      translateY(90px)
+      translateZ(-100px)
+      rotateX(-8deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateY(-8px)
+      translateZ(0)
+      rotateX(1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      translateZ(0)
+      rotateX(0)
+      scale(1);
+  }
+}
+
+/* =========================================
+   MOTION 4 — SOFT LEFT ENTRY
+   PORTFOLIO PAGE ONLY
+   ========================================= */
+
+.page-motion-portfolio {
+  animation:
+    page-enter-left
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-enter-left {
+  from {
+    opacity: 0;
+    transform:
+      translateX(-90px)
+      translateZ(-80px)
+      rotateY(7deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateX(8px)
+      translateZ(0)
+      rotateY(-1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0)
+      translateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================
+   MOTION 5 — DEEP 3D SWING
+   EXPERIMENTS PAGE ONLY
+   ========================================= */
+
+.page-motion-experiments {
+  animation:
+    page-enter-deep-3d
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center center;
+}
+
+@keyframes page-enter-deep-3d {
+  from {
+    opacity: 0;
+    transform:
+      perspective(900px)
+      translate3d(120px, 0, -260px)
+      rotateY(-28deg)
+      scale(0.88);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(-8px, 0, 12px)
+      rotateY(2deg)
+      scale(1.008);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateY(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 6 — DEPTH ZOOM
+   CONTACT PAGE ONLY
+   ========================================= */
+
+.page-motion-contact {
+  animation:
+    page-enter-depth
+    2.4s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center center;
+}
+
+@keyframes page-enter-depth {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1200px)
+      translateZ(-420px)
+      scale(0.72);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translateZ(18px)
+      scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translateZ(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 7 — DEEP DIAGONAL ENTRY
+   HOME PAGE ONLY
+   ========================================= */
+
+.page-motion-home {
+  animation:
+    page-enter-diagonal
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center center;
+}
+
+@keyframes page-enter-diagonal {
+  from {
+    opacity: 0;
+    transform:
+      perspective(900px)
+      translate3d(130px, 95px, -280px)
+      rotateZ(5deg)
+      rotateY(-8deg)
+      scale(0.84);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(-8px, -5px, 15px)
+      rotateZ(-0.7deg)
+      rotateY(1.5deg)
+      scale(1.01);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================
+   MOTION 8 — SOFT CORNER REVEAL
+   ABOUT PAGE ONLY
+   ========================================= */
+
+.page-motion-about {
+  animation:
+    page-enter-corner
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: top right;
+}
+
+@keyframes page-enter-corner {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(110px, -80px, -220px)
+      rotateZ(4deg)
+      rotateY(-7deg)
+      scale(0.88);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(-6px, 4px, 12px)
+      rotateZ(-0.5deg)
+      rotateY(1deg)
+      scale(1.008);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+/* =========================================
+   MOTION 9 — DIAGONAL LIFT
+   PORTFOLIO PAGE ONLY
+   ========================================= */
+
+.page-motion-portfolio {
+  animation:
+    page-enter-diagonal-lift
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center bottom;
+}
+
+@keyframes page-enter-diagonal-lift {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(-80px, 130px, -180px)
+      rotateZ(-2deg)
+      rotateY(-5deg)
+      rotateX(5deg)
+      scale(0.88);
+  }
+
+  60% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(18px, -10px, 18px)
+      rotateZ(0.7deg)
+      rotateY(1.5deg)
+      rotateX(-1deg)
+      scale(1.012);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      rotateX(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 10 — 3D DROP & SETTLE
+   EXPERIMENTS PAGE ONLY
+   ========================================= */
+
+.page-motion-experiments {
+  animation:
+    page-enter-drop
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center top;
+}
+
+@keyframes page-enter-drop {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(0, -150px, -220px)
+      rotateX(12deg)
+      rotateZ(-1.5deg)
+      scale(0.88);
+  }
+
+  58% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(0, 12px, 15px)
+      rotateX(-1.5deg)
+      rotateZ(0.3deg)
+      scale(1.01);
+  }
+
+  78% {
+    transform:
+      perspective(1200px)
+      translate3d(0, -3px, 4px)
+      rotateX(0.3deg)
+      rotateZ(0)
+      scale(1.003);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateX(0)
+      rotateZ(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 11— LEFT 3D SWEEP
+   EXPERIMENTS PAGE ONLY
+   ========================================= */
+
+.page-motion-experiments {
+  animation:
+    page-enter-left-sweep
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: left center;
+}
+
+@keyframes page-enter-left-sweep {
+  from {
+    opacity: 0;
+    transform:
+      perspective(950px)
+      translate3d(-150px, 20px, -220px)
+      rotateY(14deg)
+      rotateZ(-2deg)
+      scale(0.86);
+  }
+
+  60% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(12px, -3px, 18px)
+      rotateY(-1.5deg)
+      rotateZ(0.3deg)
+      scale(1.01);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateY(0)
+      rotateZ(0)
+      scale(1);
+  }
+}
+/* =========================================
+   MOTION 12 — 3D ROLL & SETTLE
+   ========================================= */
+
+.page-motion-resume {
+  animation:
+    page-enter-roll
+    2.4s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center center;
+}
+
+@keyframes page-enter-roll {
+
+  /* 1 — ورود از دور */
+  0% {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(120px, 70px, -300px)
+      rotateX(20deg)
+      rotateY(-22deg)
+      rotateZ(10deg)
+      scale(0.78);
+  }
+
+  /* 2 — نزدیک شدن و باز شدن */
+  38% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(20px, -8px, -20px)
+      rotateX(-5deg)
+      rotateY(7deg)
+      rotateZ(-2deg)
+      scale(0.98);
+  }
+
+  /* 3 — رسیدن به سطح */
+  58% {
+    transform:
+      perspective(1200px)
+      translate3d(-6px, 3px, 12px)
+      rotateX(2deg)
+      rotateY(-2deg)
+      rotateZ(0.8deg)
+      scale(1.012);
+  }
+
+  /* 4 — برخورد خیلی نرم */
+  70% {
+    transform:
+      perspective(1200px)
+      translate3d(3px, -2px, 4px)
+      rotateX(-0.8deg)
+      rotateY(0.8deg)
+      rotateZ(-0.3deg)
+      scale(1.004);
+  }
+
+  /* 5 — برگشت کوتاه */
+  82% {
+    transform:
+      perspective(1200px)
+      translate3d(-2px, 1px, 1px)
+      rotateX(0.4deg)
+      rotateY(-0.3deg)
+      rotateZ(0.15deg)
+      scale(1.001);
+  }
+
+  /* 6 — نشستن کامل */
+  100% {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateX(0)
+      rotateY(0)
+      rotateZ(0)
+      scale(1);
+  }
+}
+
+ /* =========================================
+   MOTION SYSTEM — 10 MOTIONS
+   ========================================= */
+
+.content-panel {
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.page-stage {
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity;
+}
 
 
+/* MOTION 1 — RIGHT ENTRY */
+.page-motion-1 {
+  animation:
+    page-motion-right
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
 
+@keyframes page-motion-right {
+  from {
+    opacity: 0;
+    transform:
+      translateX(70px)
+      translateZ(-80px)
+      rotateY(-7deg)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0)
+      translateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 2 — TOP LANDING */
+.page-motion-2 {
+  animation:
+    page-motion-top
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-top {
+  from {
+    opacity: 0;
+    transform:
+      translateY(-90px)
+      translateZ(-100px)
+      rotateX(8deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateY(8px)
+      translateZ(0)
+      rotateX(-1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      translateZ(0)
+      rotateX(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 3 — BOTTOM RISE */
+.page-motion-3 {
+  animation:
+    page-motion-bottom
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-bottom {
+  from {
+    opacity: 0;
+    transform:
+      translateY(90px)
+      translateZ(-100px)
+      rotateX(-8deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateY(-8px)
+      translateZ(0)
+      rotateX(1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      translateZ(0)
+      rotateX(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 4 — LEFT ENTRY */
+.page-motion-4 {
+  animation:
+    page-motion-left
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-left {
+  from {
+    opacity: 0;
+    transform:
+      translateX(-90px)
+      translateZ(-80px)
+      rotateY(7deg)
+      scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform:
+      translateX(8px)
+      translateZ(0)
+      rotateY(-1deg)
+      scale(1.005);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0)
+      translateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 5 — DEEP 3D */
+.page-motion-5 {
+  animation:
+    page-motion-deep
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-deep {
+  from {
+    opacity: 0;
+    transform:
+      perspective(900px)
+      translate3d(120px, 0, -260px)
+      rotateY(-28deg)
+      scale(0.88);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(-8px, 0, 12px)
+      rotateY(2deg)
+      scale(1.008);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 6 — DEPTH ZOOM */
+.page-motion-6 {
+  animation:
+    page-motion-depth
+    2.4s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-depth {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1200px)
+      translateZ(-420px)
+      scale(0.72);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translateZ(18px)
+      scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translateZ(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 7 — DIAGONAL */
+.page-motion-7 {
+  animation:
+    page-motion-diagonal
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes page-motion-diagonal {
+  from {
+    opacity: 0;
+    transform:
+      perspective(900px)
+      translate3d(130px, 95px, -280px)
+      rotateZ(5deg)
+      rotateY(-8deg)
+      scale(0.84);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1100px)
+      translate3d(-8px, -5px, 15px)
+      rotateZ(-0.7deg)
+      rotateY(1.5deg)
+      scale(1.01);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+ /* MOTION 8 — CORNER REVEAL */
+.page-motion-8 {
+  animation:
+    page-motion-corner
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: top right;
+}
+
+@keyframes page-motion-corner {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(110px, -80px, -220px)
+      rotateZ(4deg)
+      rotateY(-7deg)
+      scale(0.88);
+  }
+
+  65% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(-6px, 4px, 12px)
+      rotateZ(-0.5deg)
+      rotateY(1deg)
+      scale(1.008);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 9 — DIAGONAL LIFT */
+.page-motion-9 {
+  animation:
+    page-motion-lift
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center bottom;
+}
+
+@keyframes page-motion-lift {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(-80px, 130px, -180px)
+      rotateZ(-2deg)
+      rotateY(-5deg)
+      rotateX(5deg)
+      scale(0.88);
+  }
+
+  60% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(18px, -10px, 18px)
+      rotateZ(0.7deg)
+      rotateY(1.5deg)
+      rotateX(-1deg)
+      scale(1.012);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateZ(0)
+      rotateY(0)
+      rotateX(0)
+      scale(1);
+  }
+}
+
+
+/* MOTION 10 — DROP & SETTLE */
+.page-motion-10 {
+  animation:
+    page-motion-drop
+    2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+
+  transform-origin: center top;
+}
+
+@keyframes page-motion-drop {
+  from {
+    opacity: 0;
+    transform:
+      perspective(1000px)
+      translate3d(0, -150px, -220px)
+      rotateX(12deg)
+      rotateZ(-1.5deg)
+      scale(0.88);
+  }
+
+  58% {
+    opacity: 1;
+    transform:
+      perspective(1150px)
+      translate3d(0, 12px, 15px)
+      rotateX(-1.5deg)
+      rotateZ(0.3deg)
+      scale(1.01);
+  }
+
+  78% {
+    transform:
+      perspective(1200px)
+      translate3d(0, -3px, 4px)
+      rotateX(0.3deg)
+      rotateZ(0)
+      scale(1.003);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      perspective(1200px)
+      translate3d(0, 0, 0)
+      rotateX(0)
+      rotateZ(0)
+      scale(1);
+  }
+}
 
 
 

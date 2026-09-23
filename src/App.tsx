@@ -12,10 +12,12 @@ import Contact from './pages/Contact'
 
 function App() {
   const [activePage, setActivePage] = useState('home')
+  const [motionIndex, setMotionIndex] = useState(1)
 
   const handleNavigate = (page: string) => {
     if (page === activePage) return
 
+    setMotionIndex((current) => (current % 10) + 1)
     setActivePage(page)
   }
 
@@ -33,8 +35,8 @@ function App() {
   return (
     <PortfolioShell onNavigate={handleNavigate}>
       <div
-        key={activePage}
-        className={`page-stage page-motion-${activePage}`}
+        key={`${activePage}-${motionIndex}`}
+        className={`page-stage page-motion-${motionIndex}`}
       >
         {renderPage()}
       </div>
@@ -43,3 +45,4 @@ function App() {
 }
 
 export default App
+
